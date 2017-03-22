@@ -8,7 +8,7 @@ public class Dogbark {
 
     public static void main(String[] args) {
 
-        //Создаем объекты собак присваиваем им  размер
+        //Создаем объекты собак присваиваем им размер
         Dog dog1 = new Dog();
         dog1.setSize(70);
 
@@ -59,7 +59,6 @@ public class Dogbark {
                 }
                 System.out.println("");
             }
-
         }
     }
 }
