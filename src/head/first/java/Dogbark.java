@@ -1,5 +1,7 @@
 package head.first.java;
 
+import java.util.Set;
+
 /*
 Класс показывает наглядно, как создавать объекты, инкапсулировать переменную, и обратиться к ней с помощью
 методов Get и Set, так же обращение объектов к одному и тому же методу, с передачей разных параматров.
@@ -26,7 +28,11 @@ public class Dogbark {
 
     private static class Dog {
 
-        // Инкапсулируем переменную size, чтобы не обращаться к ней напрямую
+        /* Инкапсулируем переменную size делая ее приватной, чтобы не обращаться к ней напрямую, а только через
+        публичные методы Get и Set
+        */
+        private int size;
+
         public int getSize() {
             return size;
         }
@@ -35,23 +41,22 @@ public class Dogbark {
             this.size = size;
         }
 
-        private int size;
-
         // Метод реализующий лай собак, в соответствии размерам собаки
-        public void bark(String name, int i) {
+        private void bark(String name, int i) {
             if(getSize() > 60) {
                 System.out.print(name + ":");
                 for (int j = 0; j < i; j++) {
                     System.out.print(" Гав гав!");
-
                 }
                 System.out.println("");
+
             }else if(getSize() > 14) {
                 System.out.print(name + ":");
                 for (int j = 0; j < i; j++) {
                     System.out.print(" Вуф вуф!");
                 }
                 System.out.println("");
+
             }else {
                 System.out.print(name + ":");
                 for (int j = 0; j < i; j++) {
